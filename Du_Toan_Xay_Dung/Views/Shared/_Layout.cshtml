@@ -1,0 +1,124 @@
+﻿@using Du_Toan_Xay_Dung.Handlers
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Oxygen:400,700,300" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/Content/Style.css">
+    <link rel="stylesheet" href="~/Content/font-awesome/css/font-awesome.min.css">
+    <link href="~/Content/AdminLTE.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/AdminLTE.css">
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/jquery-ui.css" />
+    @*<link href="~/Content/bootstrap-select.css" rel="stylesheet" />*@
+    <link href="~/Content/bootstrap-select.min.css" rel="stylesheet" />
+    
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/respond.js"></script>
+    <script src="~/Scripts/respond.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.8.24.min.js"></script>
+    
+    
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap-select.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="logo" class="container">
+            <h1><a href="#">Dự Toán Xây Dựng</a></h1>
+            <div class="clear"></div>
+            <p>Vươn lên tầm cao mới</p>
+        </div>
+        <div id="menu-wrapper">
+            <div id="menu" class="container">
+                @if(SessionHandler.User !=null)
+                {
+                    <input type="hidden" id="txt_user" value="@SessionHandler.User.Email" />
+                }
+                else
+                {
+                    <input type="hidden" id="txt_user" value="" />
+                }
+                <ul>
+                    <li><a href="/Home/Index">Trang Chủ</a></li>
+                    @if(SessionHandler.User!=null)
+                    {
+                        <li><a href="/CongTrinh/Index">Công Trình</a></li>
+                    }
+                    <li><a id="btn_href_hangmuc" href="#">Dự Toán</a></li>
+                    <li><a>Photos</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Links</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    @if (SessionHandler.User == null)
+                    {
+                        <li><a href="/Account/Login">Đăng Nhập</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="/Account/Logout">Đăng Xuất</a></li>
+                    }
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- script link hang muc -->
+        <script>
+            
+            $(document).ready(function () {
+                $('#btn_href_hangmuc').click(function () {
+                    var s = $('#txt_user').val();
+                    if(s=='')
+                    {
+                        var con_hm = confirm("Bạn vẫn chưa đăng nhập, Hệ thống sẽ không thể lưu dữ liệu của bạn, Bạn có muốn tiếp tục...!!!");
+                        if (con_hm == true)
+                        {
+                            $(this).attr('href', '/HangMuc/Index_2');
+                        }
+                    }
+                    else
+                    {
+                        $(this).attr('href', "/HangMuc/Index_2");
+                    }
+                });
+            });
+            
+        </script>
+        <!-- end #page -->
+        <div class="container body-content">
+            @RenderBody()
+        </div>
+    </div>
+    <div id="footer-bg">
+        <div id="footer-content" class="container">
+            <div id="column1">
+                <h2>Tellus feugiat eleifend</h2>
+                <ul class="list-style2">
+                    <li class="first"><a href="#">Pellentesque quis elit non lectus gravida blandit.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
+                    <li><a href="#">Phasellus nec erat sit amet nibh pellentesque congue.</a></li>
+                    <li><a href="#">Cras vitae metus aliquam risus pellentesque pharetra.</a></li>
+                    <li><a href="#">Maecenas vitae orci vitae tellus feugiat eleifend.</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>© 2013 Untitled Inc. All rights reserved. Lorem ipsum dolor sit amet nullam blandit consequat phasellus etiam lorem. Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.  Photos by <a href="http://fotogrph.com/">Fotogrph</a>.</p>
+    </div>
+    <!-- end #footer -->
+    <!-- day la js cua MVC no nam trong bundles -->
+    @*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")*@
+    <script src="~/Scripts/utility/app.js"></script>
+    @RenderSection("Scripts", required: false)
+    @RenderSection("CSS", required: false)
+</body>
+</html>

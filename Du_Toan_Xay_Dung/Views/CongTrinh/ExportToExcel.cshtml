@@ -1,0 +1,131 @@
+﻿@using Du_Toan_Xay_Dung.Models
+@{
+    ViewBag.Title = "ExportToExcel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var congtrinh = ViewData["CongTrinh"] as CongTrinhViewModel;
+    var ct_hangmucs = ViewData["CT-HangMucs"] as List<HangMucViewModel>;
+    var hms_congviecs = ViewData["HangMucs-CongViec_Users"] as List<CongViec_User_ViewModel>;
+    var cvs_haophis = ViewData["CongViecs-HaoPhis"] as List<HaoPhi_User_ViewModel>;
+    
+}
+@section Scripts{
+    <script src="~/Scripts/DuToan/exportexcel.js"></script>
+}
+@section CSS{
+    <style>
+        #hangmuc {
+            counter-reset: serial-number; /* Set the serial number counter to 0 */
+        }
+            #hangmuc td:first-child:before {
+                counter-increment: serial-number; /* Increment the serial number counter */
+                content: counter(serial-number);
+            }
+            #haophi {
+            counter-reset: serial-number; /* Set the serial number counter to 0 */
+        }
+
+            #haophi td:first-child:before {
+                counter-increment: serial-number; /* Increment the serial number counter */
+                content: counter(serial-number);
+            }
+            #congviec {
+            counter-reset: serial-number; /* Set the serial number counter to 0 */
+        }
+
+            #congviec td:first-child:before {
+                counter-increment: serial-number; /* Increment the serial number counter */
+                content: counter(serial-number);
+            }
+    </style>
+}
+
+<section class="content-header">
+    <h1></h1>
+    <ol class="breadcrumb">
+        <li><a href="/CongTrinh/Index"><i class="fa fa-dashboard"></i>Công Trình</a></li>
+        <li class="active">
+            <button  onclick="tablesToExcel(['hangmuc','congviec','haophi'], ['Hạng mục công trình','Công việc','Thành phần hao phí'], 'TestBook.xls', 'Excel')">Export to Excel</button>
+        </li>
+    </ol>
+</section>
+
+<section class="content" style="margin-top:100px">
+    <div class="container">
+      <!--Bảng dữ liệu danh sách hạng mục trong công trình!-->
+        <h4>Danh sách hạng mục</h4>
+        <table  border="1" id="hangmuc">
+        <tr><th>Bảng dự toán hạng mục công trình: &nbsp&nbsp&nbsp @congtrinh.TenCT</th></tr>
+        <tr>
+             <th width="300px">Mã hạng mục</th>
+             <th width="300px">Mã công trình</th>
+             <th width="300px">Tên hạng mục</th>
+            <th width="300px">Mô tả</th>
+            <th width="300px">Giá</th>
+        </tr>
+        @foreach(var hm in ct_hangmucs)
+        {
+        <tr>
+            <td>@hm.MaHM</td>
+            <td>@hm.MaCT</td>
+            <td>@hm.TenHM</td>
+            <td>@hm.MoTa</td>
+            <td>@hm.Gia</td>
+        </tr>
+            }
+        </table>
+
+        <!--Bảng dữ liệu danh sách công việc trong hạng mục của công trình!-->
+        <h4> Danh sách công việc trong hạng mục của công trình</h4>
+        <table border="1" id="congviec">
+            <tr>
+                <th>Mã hiệu công việc-người dùng</th>
+                <th> Mã hạng mục</th>
+                <th> Mã hiệu công việc theo định mức</th>
+                <th>Tên công việc</th>
+                <th>Đơn vị</th>
+                <th>Khối lượng</th>
+                <th>Giá vật liệu</th>
+                <th>Giá nhân công</th>
+                <th>Giá máy thi công </th>
+                <th>Thành tiền</th>
+            </tr>
+            @foreach(var cv in hms_congviecs)
+            {
+                <tr>
+                    <td>@cv.MaHieuCV_User</td>
+                     <td>@cv.MaHM</td>
+                     <td>@cv.MaHieuCV_DM</td>
+                     <td>@cv.TenCongViec</td>
+                     <td>@cv.DonVi</td>
+                     <td>@cv.KhoiLuong</td>
+                     <td>@cv.GiaVL</td>
+                     <td>@cv.GiaNC</td>
+                     <td>@cv.GiaMTC</td>
+                     <td>@cv.ThanhTien</td>
+                </tr>
+            }
+        </table>
+        <h4> Danh sách thành phần hao phí</h4>
+        <!-- Danh sách thành phần hao phí ứng với từng công việc!-->
+        <table border="1" id="haophi">
+            <tr>
+                <th width="300px">Mã hao phí</th>
+                <th width="300px">Mã hiệu công việc</th>
+                <th width="300px">Tên hao phí</th>
+                <th width="300px">Đơn vị</th>
+                <th width="300px">Giá</th>
+            </tr>
+            @foreach(var hp in cvs_haophis)
+            {
+                <tr>
+                    <td>@hp.MaHP</td>
+                    <td>@hp.MaHieuCV_User</td>
+                    <td>@hp.Ten</td>
+                    <td>@hp.DonVi</td>
+                    <td>@hp.Gia</td>
+                </tr>
+            }
+        </table>
+
+</div>
+</section>

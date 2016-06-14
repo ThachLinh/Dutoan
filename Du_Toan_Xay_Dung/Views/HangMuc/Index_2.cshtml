@@ -1,0 +1,155 @@
+﻿@using Du_Toan_Xay_Dung.Models
+@using Du_Toan_Xay_Dung.Handlers
+@{
+    ViewBag.Title = "Index_2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var ListCongViec_DM = ViewData["DSDinhMuc"] as List<DinhMucViewModel>;
+    //var danhsachCt = ViewData["DSCongTrinh"] as List<CongTrinhCuaUser>;
+    var ListCongViec_User = ViewData["HangMuc_ChiTiet"] as List<CongViec_User_ViewModel>;
+    var congtrinh = ViewData["CongTrinh"] as CongTrinhViewModel;
+    var hangmuc = ViewData["HangMuc"] as HangMucViewModel;
+    var dscongtrinh = ViewData["DSCongTrinh"] as List<CongTrinhViewModel>;
+
+}
+@section Scripts{
+    <script src="~/Scripts/DuToan/index_2.js"></script>
+}
+
+@section CSS{
+    <style>
+        #mytable {
+            counter-reset: serial-number; /* Set the serial number counter to 0 */
+        }
+
+            #mytable td:first-child:before {
+                counter-increment: serial-number; /* Increment the serial number counter */
+                content: counter(serial-number);
+            }
+    </style>
+}
+
+
+<section class="content">
+    @if (congtrinh != null)
+    {
+        <h2>@congtrinh.TenCT</h2>
+        <br />
+        <br />
+    }
+    else
+    {
+        if (SessionHandler.User != null)
+        {
+            <select id="combb_congtrinh">
+                <option value="0">--Chọn Công Trình--</option>
+                @foreach (var item in dscongtrinh)
+                {
+                    <option value="@item.MaCT">@item.TenCT</option>
+                }
+            </select>
+            <br />
+            <br />
+
+            <script>
+                $(document).ready(function () {
+                    $('#combb_congtrinh').on('change', function () {
+                        $('#txt_congtrinh').val($(this).val());
+                    });
+                });
+            </script>
+        }
+    }
+
+    @{ Html.RenderPartial("_Menu_HangMuc");}
+    <br />
+
+    <div class="col-lg-3" style="margin-top: 20px">
+        <a class="btn btn-block btn-primary btn-lg" id="btn_themhm" href="/HangMuc/Index" target="_blank"><i class="fa fa-fw fa-plus"></i>Thêm Hạng Mục</a>
+    </div>
+    <div id="container" class="container" style="margin-top:100px; display:block">
+        <div class="row">
+            <div class="col-xs-12">
+                <form method="post" action="/HangMuc/FormSubmit" id="formAdd" enctype="multipart/form-data">
+                    @if (congtrinh != null)
+                    {
+                        <input type="hidden" value="@congtrinh.MaCT" id="txt_ma_congtrinh" name="txt_ma_congtrinh" />
+                    }
+                    else
+                    {
+                        <input type="hidden" value="" id="txt_ma_congtrinh" name="txt_ma_congtrinh" />
+                    }
+                    <div class="box" id="div_primary">
+                        <div class="box-header" style="background-color: #f9f9f9">
+                            <h3 id="h3_hangmuc" class="box-title">Tên Hạng Mục Mới</h3>
+                            <input type="hidden" name="txt_ma_hangmuc" id="txt_ma_hangmuc" value="" />
+                            <input type="hidden" name="txt_ten_hangmuc" id="txt_ten_hangmuc" value="Tên Hạng Mục Mới" />
+                            <span style="width: 25px; height: 25px; background-color: #fff; border:none" id="btn_edit_ten_hangmuc"><i class="fa fa-fw fa-edit"></i></span>
+                            <div class="box-tools">
+                                @if (ListCongViec_User == null && ListCongViec_DM != null)
+                                {
+                                    <select class="selectpicker" name="cmbtencv[]" data-width="500px" data-live-search="true">
+                                        @if (ListCongViec_DM != null)
+                                        {
+                                            <option value="0">--Chọn Công Việc--</option>
+                                            foreach (var k in ListCongViec_DM)
+                                            {
+                                                <option value="@k.MaHieuCV_DM" data-donvi="@k.DonVi">- @k.CongTac @k.RangBuoc</option>
+                                            }
+                                        }
+                                    </select>
+                                }
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body table-responsive no-padding">
+                            <table class="table table-hover" id="mytable">
+                                <tbody>
+                                    <tr>
+                                        <th width="30px">STT</th>
+                                        <th width="300px">Danh Mục Công Việc</th>
+                                        <th width="50px">Đơn Vị</th>
+                                        <th>Khối Lượng</th>
+                                        <th colspan="4" style="text-align:center">Đơn giá</th>
+                                        <th width="130px">Thành Tiền</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="4"></th>
+                                        <th style="border-right: 1px solid #dddddd; border-left: 1px solid #dddddd">Giá Vật Liệu</th>
+                                        <th style="border-right:1px solid #dddddd;">Giá Nhân Công</th>
+                                        <th style="border-right:1px solid #dddddd;">Giá Máy Thi Công</th>
+                                        <th style="border-right:1px solid #dddddd; width:50px">Chi Tiết</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div style="text-align:right">
+                        <span style="font-weight:bold; font-size:20px; margin-right:200px;">TỔNG:</span>
+                        <span id="span_tongtien" style="margin-right: 30px; font-weight: bold; font-size: 20px"></span>
+                        <input type="hidden" id="txt_tongtien" name="txt_tongtien" value="" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2" style="float:right">
+                <button type="submit" class="btn btn-block btn-primary btn-flat" id="btnSubmit">Save</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    
+    </div>
+</section>
+
+

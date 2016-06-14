@@ -1,0 +1,219 @@
+F:\DTXD\Du_Toan_Xay_Dung\bin\Du_Toan_Xay_Dung.dll.config
+F:\DTXD\Du_Toan_Xay_Dung\bin\Du_Toan_Xay_Dung.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\Du_Toan_Xay_Dung.pdb
+F:\DTXD\Du_Toan_Xay_Dung\bin\Antlr3.Runtime.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\EntityFramework.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\EntityFramework.SqlServer.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.Core.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Owin.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Cookies.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Facebook.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Google.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.OAuth.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Twitter.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Web.Infrastructure.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\Newtonsoft.Json.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\Owin.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\System.Web.Helpers.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\System.Web.Mvc.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\System.Web.Optimization.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\System.Web.Razor.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\System.Web.WebPages.Deployment.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\System.Web.WebPages.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\System.Web.WebPages.Razor.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\WebGrease.dll
+F:\DTXD\Du_Toan_Xay_Dung\bin\System.Web.Helpers.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\System.Web.Mvc.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\System.Web.Optimization.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\System.Web.Razor.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\System.Web.WebPages.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\System.Web.WebPages.Deployment.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\System.Web.WebPages.Razor.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\Newtonsoft.Json.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\Antlr3.Runtime.pdb
+F:\DTXD\Du_Toan_Xay_Dung\bin\EntityFramework.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\EntityFramework.SqlServer.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.Core.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Owin.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Facebook.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Cookies.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.OAuth.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Google.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Twitter.xml
+F:\DTXD\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\DTXD\Du_Toan_Xay_Dung\obj\Debug\Du_Toan_Xay_Dung.csprojResolveAssemblyReference.cache
+F:\DTXD\Du_Toan_Xay_Dung\obj\Debug\Du_Toan_Xay_Dung.dll
+F:\DTXD\Du_Toan_Xay_Dung\obj\Debug\Du_Toan_Xay_Dung.pdb
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Du_Toan_Xay_Dung.dll.config
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Du_Toan_Xay_Dung.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Du_Toan_Xay_Dung.pdb
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Antlr3.Runtime.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\EntityFramework.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\EntityFramework.SqlServer.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Google.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Web.Infrastructure.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Newtonsoft.Json.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Owin.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\System.Web.Helpers.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\System.Web.Mvc.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\System.Web.Optimization.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\System.Web.Razor.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\System.Web.WebPages.Deployment.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\System.Web.WebPages.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\System.Web.WebPages.Razor.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\WebGrease.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\EntityFramework.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\EntityFramework.SqlServer.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\System.Web.Helpers.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\System.Web.Mvc.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\System.Web.Optimization.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\System.Web.Razor.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\System.Web.WebPages.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\System.Web.WebPages.Deployment.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\System.Web.WebPages.Razor.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Newtonsoft.Json.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Antlr3.Runtime.pdb
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Google.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\obj\Debug\Du_Toan_Xay_Dung.dll
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\obj\Debug\Du_Toan_Xay_Dung.pdb
+E:\Du_Toan_Xay_Dung\Du_Toan_Xay_Dung\obj\Debug\Du_Toan_Xay_Dung.csprojResolveAssemblyReference.cache
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Du_Toan_Xay_Dung.dll.config
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Du_Toan_Xay_Dung.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Du_Toan_Xay_Dung.pdb
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Antlr3.Runtime.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\EntityFramework.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\EntityFramework.SqlServer.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Newtonsoft.Json.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Owin.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\System.Web.Helpers.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\System.Web.Mvc.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\System.Web.Optimization.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\System.Web.Razor.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\System.Web.WebPages.Deployment.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\System.Web.WebPages.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\System.Web.WebPages.Razor.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\WebGrease.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\EntityFramework.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\EntityFramework.SqlServer.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\System.Web.Helpers.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\System.Web.Mvc.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\System.Web.Optimization.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\System.Web.Razor.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\System.Web.WebPages.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\System.Web.WebPages.Deployment.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\System.Web.WebPages.Razor.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Newtonsoft.Json.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Antlr3.Runtime.pdb
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\obj\Debug\Du_Toan_Xay_Dung.dll
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\obj\Debug\Du_Toan_Xay_Dung.pdb
+C:\Users\HHD\Documents\GitHub\DuToanXayDung\Du_Toan_Xay_Dung\obj\Debug\Du_Toan_Xay_Dung.csprojResolveAssemblyReference.cache
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Du_Toan_Xay_Dung.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Du_Toan_Xay_Dung.pdb
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Antlr3.Runtime.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\EntityFramework.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\EntityFramework.SqlServer.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Owin.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Google.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Web.Infrastructure.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Newtonsoft.Json.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Owin.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\System.Web.Helpers.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\System.Web.Mvc.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\System.Web.Optimization.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\System.Web.Razor.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\System.Web.WebPages.Deployment.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\System.Web.WebPages.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\System.Web.WebPages.Razor.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\WebGrease.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\EntityFramework.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\EntityFramework.SqlServer.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\System.Web.Helpers.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\System.Web.Mvc.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\System.Web.Optimization.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\System.Web.Razor.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\System.Web.WebPages.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\System.Web.WebPages.Deployment.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\System.Web.WebPages.Razor.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Newtonsoft.Json.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Antlr3.Runtime.pdb
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Owin.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Google.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\obj\Debug\Du_Toan_Xay_Dung.csprojResolveAssemblyReference.cache
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\obj\Debug\Du_Toan_Xay_Dung.dll
+D:\Tài liệu môn học\Luận văn\DuToanXayDung-master\Du_Toan_Xay_Dung\obj\Debug\Du_Toan_Xay_Dung.pdb
