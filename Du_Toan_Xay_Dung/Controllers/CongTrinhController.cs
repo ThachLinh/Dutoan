@@ -8,6 +8,14 @@ using Du_Toan_Xay_Dung.Handlers;
 using System.Web.UI.WebControls;
 using System.IO;
 using System.Web.UI;
+//using CRUDDeom.Models;
+using OfficeOpenXml;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
 
 namespace Du_Toan_Xay_Dung.Controllers
 {
@@ -23,7 +31,7 @@ namespace Du_Toan_Xay_Dung.Controllers
             {
                 var user = SessionHandler.User;
 
-                var list_mact = _db.CongTrinhs.Where(i => i.Email.Equals(user.Email)).Select(i => i.MaCT).ToList();
+                 
 
                 ViewData["List_CongTrinh"] = (from ct in _db.CongTrinhs
                                               where ct.Email.Equals(user.Email)
@@ -36,7 +44,7 @@ namespace Du_Toan_Xay_Dung.Controllers
                                               }).ToList();
 
                 ViewData["List_HangMuc"] = (from hm in _db.HangMucs
-                                            where list_mact.Contains(hm.MaCT)
+                                            where hm.MaCT.Equals(hm.MaCT)
                                             select new HangMucViewModel()
                                             {
                                                 MaCT = hm.MaCT,
@@ -232,15 +240,204 @@ namespace Du_Toan_Xay_Dung.Controllers
         {
             if(ID!=null)
             {
-                ViewData["CongTrinh"] = _db.CongTrinhs.Where(i => i.MaCT.Equals(ID)).Select(i => new CongTrinhViewModel(i)).FirstOrDefault();
 
-                ViewData["CT-HangMucs"] = _db.HangMucs.Where(i => i.MaCT.Equals(ID)).Select(i => new HangMucViewModel(i)).ToList();
+                var congtrinh = _db.CongTrinhs.Where(i => i.MaCT.Equals(ID)).Select(i => new CongTrinhViewModel(i)).FirstOrDefault();
+
+                var hangmuc = _db.HangMucs.Where(i => i.MaCT.Equals(ID)).Select(i => new HangMucViewModel(i)).ToList();
                 var mahangmucs = _db.HangMucs.Where(i => i.MaCT.Equals(ID)).Select(i => i.MaHM).ToList();
 
-                ViewData["HangMucs-CongViec_Users"] = _db.CongViecs.Where(i=> mahangmucs.Contains(i.MaHM)).Select(i => new CongViec_User_ViewModel(i)).ToList();
+                var congviec = _db.CongViecs.Where(i => mahangmucs.Contains(i.MaHM)).Select(i => new CongViec_User_ViewModel(i)).ToList();
                 var macongviecs = _db.CongViecs.Where(i => mahangmucs.Contains(i.MaHM)).Select(i => i.MaHieuCV_User).ToList();
 
-                ViewData["CongViecs-HaoPhis"] = _db.ThanhPhanHaoPhis.Where(i => macongviecs.Contains(i.MaHieuCV_User)).Select(i => new HaoPhi_User_ViewModel(i)).ToList();
+                var haophi = _db.ThanhPhanHaoPhis.Where(i => macongviecs.Contains(i.MaHieuCV_User)).Select(i => new HaoPhi_User_ViewModel(i)).ToList();
+
+
+                using (ExcelPackage pck = new ExcelPackage())
+                {
+                   ExcelWorksheet ws = pck.Workbook.Worksheets.Add("Hạng mục");
+                   ExcelWorksheet ws1 = pck.Workbook.Worksheets.Add("Công việc");
+                   ExcelWorksheet ws2 = pck.Workbook.Worksheets.Add("Thành phần hao phí");
+                   
+                    // ADD dữ liệu cho sheet hạng mục
+                    ws.Cells["I5"].Value= "BẢNG DỰ TOÁN HẠNG MỤC CÔNG TRÌNH";
+                    ws.Cells["J7"].Value=  "Tên công trình;"+"   "+congtrinh.TenCT;
+    
+     // table  
+     ws.Cells["B8"].Value= "Mã hạng mục";
+     ws.Cells["B8:D8"].Merge = true;
+
+     ws.Cells["E8"].Value= "Mã công trình";
+     ws.Cells["E8:G8"].Merge = true;
+
+     ws.Cells["H8"].Value= "Tên hạng mục";
+     ws.Cells["H8:M8"].Merge = true;
+
+     ws.Cells["N8"].Value= "Mô tả"; 
+     ws.Cells["N8:Q8"].Merge = true;
+
+     ws.Cells["R8"].Value= "Đơn giá";
+     ws.Cells["R8:T8"].Merge = true;
+
+     //
+     var r = 9;
+     foreach(var row in hangmuc ){
+         
+         var A = "A" + r;
+         var B = "B" + r;
+         var C = "C" + r;
+         var D = "D" + r;
+         var E = "E" + r;
+         var F = "F" + r;
+         var G = "G" + r;
+         var H = "H" + r;
+         var N = "N" + r;
+         var R = "R" + r;
+         
+         //  content
+         
+         ws.Cells[B].Value= row.MaHM; 
+         ws.Cells[E].Value= row.MaCT;
+         ws.Cells[H].Value= row.TenHM; 
+         ws.Cells[N].Value= row.MoTa; 
+         ws.Cells[R].Value= row.Gia;     
+        r++;
+        }
+                
+              
+    var A2 = "A" + (r+1);
+    var B2 = "B" + (r+1);
+    var C2 = "A" + (r+2);
+    var D2 = "B" + (r+2);
+    // add dữ liệu cho sheet công việc
+    ws1.Cells["I6"].Value = "Danh sách công việc thuộc hạng mục".ToUpper();
+    ws1.Cells["A8"].Value = "Mã công việc- người dùng";
+    ws1.Cells["A8:C8"].Merge = true;
+
+    ws1.Cells["D8"].Value = "Mã hạng mục";
+    ws1.Cells["D8:E8"].Merge = true;
+
+    ws1.Cells["F8"].Value = "Mã công việc- định mức";
+    ws1.Cells["F8:H8"].Merge = true;
+
+    ws1.Cells["I8"].Value = "Tên công việc";
+    ws1.Cells["I8:J8"].Merge = true;
+
+    ws1.Cells["K8"].Value = "Đơn vị";
+    ws1.Cells["K8:L8"].Merge = true;
+
+    ws1.Cells["M8"].Value = "Khối lượng";
+    ws1.Cells["M8:N8"].Merge = true;
+
+    ws1.Cells["O8"].Value = "Giá vật liệu";
+    ws1.Cells["O8:P8"].Merge = true;
+
+    ws1.Cells["Q8"].Value = "Giá nhân công";
+    ws1.Cells["Q8:R8"].Merge = true;
+
+    ws1.Cells["S8"].Value = "Giá máy thi công";
+    ws1.Cells["S8:T8"].Merge = true;
+    
+
+    ws1.Cells["U8"].Value = "Thành tiền";
+    ws1.Cells["U8:V8"].Merge = true;
+    //
+    foreach (var row in congviec)
+    {
+
+        var A = "A" + r;
+        var B = "B" + r;
+        var C = "C" + r;
+        var D = "D" + r;
+        var E = "E" + r;
+        var F = "F" + r;
+        var G = "G" + r;
+        var H = "H" + r;
+        var I = "I" + r;
+        var K=  "K" +  r;
+        var L=  "L" +  r;
+        var N="O"+r;
+        var M="M"+r;
+        var O="O"+ r;
+        var P="P"+r;
+        var Q="Q"+r;
+        var R="R"+r;
+        var S="S"+r;
+        var T="T"+r;
+        var U="U"+r;
+        var V="V"+r;
+
+
+
+        //  content
+
+        ws1.Cells[A].Value = row.MaHieuCV_User;
+        ws1.Cells[D].Value = row.MaHM;
+        ws1.Cells[F].Value = row.MaHieuCV_DM;
+        ws1.Cells[I].Value = row.TenCongViec;
+        ws1.Cells[K].Value = row.DonVi;
+        ws1.Cells[M].Value = row.KhoiLuong;
+        ws1.Cells[O].Value = row.GiaVL;
+        ws1.Cells[Q].Value = row.GiaNC;
+        ws1.Cells[S].Value = row.GiaMTC;
+        ws1.Cells[U].Value = row.ThanhTien;
+        r++;
+    }
+    //add dữ liệu cho sheet thành phần hao phí
+    // table 
+    ws2.Cells["I5"].Value = "DANH MỤC THÀNH PHẦN HAO PHÍ";
+    ws2.Cells["B8"].Value = "Mã hạng mục";
+    ws2.Cells["B8:D8"].Merge = true;
+
+    ws2.Cells["E8"].Value = "Mã hiệu công việc- user";
+    ws2.Cells["E8:G8"].Merge = true;
+
+    ws2.Cells["H8"].Value = "Tên thành phần";
+    ws2.Cells["H8:M8"].Merge = true;
+
+    ws2.Cells["N8"].Value = "Đơn vị";
+    ws2.Cells["N8:Q8"].Merge = true;
+
+    ws2.Cells["R8"].Value = "Đơn giá";
+    ws2.Cells["R8:T8"].Merge = true;
+
+    //
+    foreach (var row in haophi)
+    {
+
+        var A = "A" + r;
+        var B = "B" + r;
+        var C = "C" + r;
+        var D = "D" + r;
+        var E = "E" + r;
+        var F = "F" + r;
+        var G = "G" + r;
+        var H = "H" + r;
+        var N = "N" + r;
+        var R = "R" + r;
+
+        //  content
+
+        ws2.Cells[B].Value = row.MaHP;
+        ws2.Cells[E].Value = row.MaHieuCV_User;
+        ws2.Cells[H].Value = row.Ten;
+        ws2.Cells[N].Value = row.DonVi;
+        ws2.Cells[R].Value = row.Gia;
+        r++;
+    }
+                
+
+    Byte[] fileBytes = pck.GetAsByteArray();
+    Response.Clear();
+    Response.Buffer = true;
+    Response.AddHeader("content-disposition", "attachment;filename=DuToanXayDung.xlsx");
+    Response.Charset = "";
+    Response.ContentType = "application/vnd.ms-excel";
+    StringWriter sw = new StringWriter();
+    Response.BinaryWrite(fileBytes);
+    Response.End();
+                }
+
+                return RedirectToAction("Index");
 
             }
 
