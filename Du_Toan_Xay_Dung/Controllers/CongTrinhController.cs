@@ -242,15 +242,15 @@ namespace Du_Toan_Xay_Dung.Controllers
             {
 
                 var congtrinh = _db.CongTrinhs.Where(i => i.MaCT.Equals(ID)).Select(i => new CongTrinhViewModel(i)).FirstOrDefault();
-
+               
                 var hangmuc = _db.HangMucs.Where(i => i.MaCT.Equals(ID)).Select(i => new HangMucViewModel(i)).ToList();
                 var mahangmucs = _db.HangMucs.Where(i => i.MaCT.Equals(ID)).Select(i => i.MaHM).ToList();
-
+                var hangmuccout=hangmuc.Count;
                 var congviec = _db.CongViecs.Where(i => mahangmucs.Contains(i.MaHM)).Select(i => new CongViec_User_ViewModel(i)).ToList();
                 var macongviecs = _db.CongViecs.Where(i => mahangmucs.Contains(i.MaHM)).Select(i => i.MaHieuCV_User).ToList();
-
+                var congvieccout=congviec.Count;
                 var haophi = _db.ThanhPhanHaoPhis.Where(i => macongviecs.Contains(i.MaHieuCV_User)).Select(i => new HaoPhi_User_ViewModel(i)).ToList();
-
+                var haophicout=haophi.Count;
 
                 using (ExcelPackage pck = new ExcelPackage())
                 {
@@ -277,6 +277,11 @@ namespace Du_Toan_Xay_Dung.Controllers
 
      ws.Cells["R8"].Value= "Đơn giá";
      ws.Cells["R8:T8"].Merge = true;
+     var dong=(hangmuccout+1).ToString();
+     var dong1="H"+dong;
+    var dong2="I"+dong;
+    
+     ws.Cells[dong1].Value="Tổng tiền công trình";
 
      //
      var r = 9;
@@ -292,14 +297,16 @@ namespace Du_Toan_Xay_Dung.Controllers
          var H = "H" + r;
          var N = "N" + r;
          var R = "R" + r;
+         var U = "U" + r;
          
          //  content
          
          ws.Cells[B].Value= row.MaHM; 
          ws.Cells[E].Value= row.MaCT;
          ws.Cells[H].Value= row.TenHM; 
-         ws.Cells[N].Value= row.MoTa; 
-         ws.Cells[R].Value= row.Gia;     
+         ws.Cells[N].Value= row.MoTa;
+         ws.Cells[R].Style.Numberformat.Format = "+SUM(Công việc!U9:U" + (congvieccout + 1) + ")";
+         ws.Cells[dong2].Style.Numberformat.Format = "+SUM(R9:R" + (hangmuccout + 1) + ")";
         r++;
         }
                 
@@ -309,7 +316,7 @@ namespace Du_Toan_Xay_Dung.Controllers
     var C2 = "A" + (r+2);
     var D2 = "B" + (r+2);
     // add dữ liệu cho sheet công việc
-    ws1.Cells["I6"].Value = "Danh sách công việc thuộc hạng mục".ToUpper();
+    ws1.Cells["I6"].Value = "DANH SÁCH CÔNG VIỆC THUỘC HẠNG MỤC";
     ws1.Cells["A8"].Value = "Mã công việc- người dùng";
     ws1.Cells["A8:C8"].Merge = true;
 
@@ -340,31 +347,31 @@ namespace Du_Toan_Xay_Dung.Controllers
 
     ws1.Cells["U8"].Value = "Thành tiền";
     ws1.Cells["U8:V8"].Merge = true;
-    //
+    var r1 = 9;
     foreach (var row in congviec)
     {
 
-        var A = "A" + r;
-        var B = "B" + r;
-        var C = "C" + r;
-        var D = "D" + r;
-        var E = "E" + r;
-        var F = "F" + r;
-        var G = "G" + r;
-        var H = "H" + r;
-        var I = "I" + r;
-        var K=  "K" +  r;
-        var L=  "L" +  r;
-        var N="O"+r;
-        var M="M"+r;
-        var O="O"+ r;
-        var P="P"+r;
-        var Q="Q"+r;
-        var R="R"+r;
-        var S="S"+r;
-        var T="T"+r;
-        var U="U"+r;
-        var V="V"+r;
+        var A = "A" + r1;
+        var B = "B" + r1;
+        var C = "C" + r1;
+        var D = "D" + r1;
+        var E = "E" + r1;
+        var F = "F" + r1;
+        var G = "G" + r1;
+        var H = "H" + r1;
+        var I = "I" + r1;
+        var K=  "K" +  r1;
+        var L=  "L" +  r1;
+        var N="O"+r1;
+        var M="M"+r1;
+        var O="O"+ r1;
+        var P="P"+r1;
+        var Q="Q"+r1;
+        var R="R"+r1;
+        var S="S"+r1;
+        var T="T"+r1;
+        var U="U"+r1;
+        var V="V"+r1;
 
 
 
@@ -375,12 +382,12 @@ namespace Du_Toan_Xay_Dung.Controllers
         ws1.Cells[F].Value = row.MaHieuCV_DM;
         ws1.Cells[I].Value = row.TenCongViec;
         ws1.Cells[K].Value = row.DonVi;
-        ws1.Cells[M].Value = row.KhoiLuong;
-        ws1.Cells[O].Value = row.GiaVL;
-        ws1.Cells[Q].Value = row.GiaNC;
-        ws1.Cells[S].Value = row.GiaMTC;
-        ws1.Cells[U].Value = row.ThanhTien;
-        r++;
+        ws1.Cells[M].Style.Numberformat.Format = (row.KhoiLuong).ToString();
+        ws1.Cells[O].Style.Numberformat.Format = "SUMIF(Thành phần hao phí!H9:H" + (haophicout + 1) + ",\"VL*\",R9:R"+(haophicout+1)+")";
+        ws1.Cells[Q].Style.Numberformat.Format = "SUMIF(Thành phần hao phí!H9:H" + (haophicout + 1) + ",\"NC*\",R9:R" + (haophicout + 1) + ")"; ;
+        ws1.Cells[S].Style.Numberformat.Format = "SUMIF(Thành phần hao phí!H9:H" + (haophicout + 1) + ",\"MTC*\",R9:R" + (haophicout + 1) + ")"; ;
+        ws1.Cells[U].Style.Numberformat.Format = "+PRODUCT(SUM(O9:S9),M9)";
+        r1++;
     }
     //add dữ liệu cho sheet thành phần hao phí
     // table 
@@ -401,19 +408,20 @@ namespace Du_Toan_Xay_Dung.Controllers
     ws2.Cells["R8:T8"].Merge = true;
 
     //
+    var r2 = 9;
     foreach (var row in haophi)
     {
 
-        var A = "A" + r;
-        var B = "B" + r;
-        var C = "C" + r;
-        var D = "D" + r;
-        var E = "E" + r;
-        var F = "F" + r;
-        var G = "G" + r;
-        var H = "H" + r;
-        var N = "N" + r;
-        var R = "R" + r;
+        var A = "A" + r2;
+        var B = "B" + r2;
+        var C = "C" + r2;
+        var D = "D" + r2;
+        var E = "E" + r2;
+        var F = "F" + r2;
+        var G = "G" + r2;
+        var H = "H" + r2;
+        var N = "N" + r2;
+        var R = "R" + r2;
 
         //  content
 
@@ -421,7 +429,7 @@ namespace Du_Toan_Xay_Dung.Controllers
         ws2.Cells[E].Value = row.MaHieuCV_User;
         ws2.Cells[H].Value = row.Ten;
         ws2.Cells[N].Value = row.DonVi;
-        ws2.Cells[R].Value = row.Gia;
+        ws2.Cells[R].Style.Numberformat.Format = (row.Gia).ToString();
         r++;
     }
                 
